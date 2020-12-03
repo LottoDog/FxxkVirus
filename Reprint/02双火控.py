@@ -99,7 +99,7 @@ def loseLife():
 def judge():
     global score, life, double_fire
     for v in virusList:
-        v.y += 2  # 病毒移动
+        v.y += 3  # 病毒移动
         if v.y >= bg.height - v.height:  # 病毒越界
             virusList.remove(v)
         if v.colliderect(plane):  # 病毒飞机碰撞
