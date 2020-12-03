@@ -146,6 +146,9 @@ def drwaBg():
 
 # 文字显示
 def display():
+    global life
+    if life <= 0:
+        life = 0
         screen.blit('over.png', (-80, -10))
         screen.draw.text('GameOver', center=[255, 500], fontsize=110, color='red')
     screen.draw.text(str(score), center=[425, 35], fontsize=80, fontname="simkai")
@@ -178,8 +181,7 @@ def draw():
     for b in sec_BulletList:
         b.draw()
 
-    if life <= 0:
-        life = 0
+
 
     display()
 
